@@ -1,0 +1,532 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+figure,
+img {
+    margin: 0;
+    padding: 0;
+}
+
+/*##################################################
+DIV CONTENEDOR DE LOS SECTION Y ASIDE DE CADA PÁGINA
+####################################################*/
+
+#contenedor {
+    min-height: 150%;
+    width: 98%;
+    margin: auto;
+    padding: 1em;
+    margin-top: 1em;
+    display: flex;
+}
+
+/*##################################################
+                    ENCABEZADO
+####################################################*/
+
+header {
+    height: 150px;
+    width: 100%;
+    background-color: #FFF;
+    position: fixed;
+    z-index: 1;
+    margin-top: -20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-top: 1.5em;
+    margin-right: 4.5em;
+    color: #1D1D6C;
+}
+
+header img {
+    height: 110px;
+    width: 130px;
+    float: left;
+    margin-top: 0.6em;
+    margin-left: 3.8em;
+}
+
+/*##################################################
+                    FOOTER
+####################################################*/
+
+footer {
+    height: 100px;
+    background-color: #666;
+    margin-top: -20px;
+}
+
+footer p a {
+    color: #fff;
+    margin-left: 0.8em;
+}
+
+/*##################################################
+                BARRA DE NAVEGACIÓN
+####################################################*/
+
+nav {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background-color: #EBEAEA;
+    text-align: center;
+    margin-top: 90px;
+    display: inline;
+}
+
+nav ul {
+    background-color: #EBEAEA;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    background-color: #EBEAEA;
+    list-style: none;
+}
+
+nav > ul {
+    margin-left: 40px;
+}
+
+nav ul li a {
+    display: inline-block;
+    width: 130px;
+    color: #414144;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav ul li:hover > a {
+    background: #C4C5D5;
+}
+
+nav > ul ul {
+    position: absolute;
+    visibility: hidden;
+}
+
+nav ul li:hover > ul {
+    visibility: visible;
+}
+
+nav ul ul li {
+    position: relative;
+}
+
+nav ul ul ul {
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+
+nav > ul > li {
+    float: left;
+}
+
+.nav:after {
+    display: block;
+    content: " ";
+    clear: both;
+}
+
+nav ul li ul li > ul li a {
+    display: inline-block;
+    width: 130px;
+    color: #2A2929;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav ul li ul li > ul li:hover {
+    background: #C4C5D5;
+}
+
+/*##################################################
+         ASIDE INDEX.HTML Y AUTORES.HTML
+####################################################*/
+
+aside {
+    max-width: 30%;
+    width: 25%;
+    height: 575px;
+    background-color: #eff2f3;
+    padding: 1em;
+    margin-left: 1em;
+    margin-top: 2em;
+    text-align: center;
+    float: right;
+}
+
+aside h3 {
+    margin: 0.3em auto;
+}
+
+
+aside img {
+    width: 75px;
+    height: 120px;
+    padding: 2px;
+    background-color: #388ee1;
+}
+
+/*##################################################
+         LOS DOS ARTICLES DE INDEX.HTML
+####################################################*/
+
+.articulo {
+    max-height: 23.7%;
+    margin-bottom: 2em;
+    text-align: center;
+    overflow: scroll;
+    background-color: #F9F9FC;
+    float: left;
+    margin-top: 2em;
+}
+
+.articulo > p {
+    margin-bottom: 1.5em;
+    text-align: justify;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+}
+
+.articulo img {
+    border-radius: 15px;
+    float: left;
+    padding: 2px;
+    background-color: #388ee1;
+    width: 150px;
+    height: 150px;
+    margin: 0.7em;
+}
+
+.articulo:first-child {
+    margin-top: 2em;
+}
+
+/*##################################################
+    DIV QUE CONTIENE LAS FOTOS DE LOS 4 AUTORES 
+            DE LA PÁGINA AUTORES.HTML
+####################################################*/
+
+#fotoautores {
+    width: 90%;
+    margin: 2.4em auto;
+}
+
+figure {
+    float: left;
+}
+
+figure img {
+    width: 320px;
+    height: 255px;
+    margin-right: 3.6em;
+}
+
+figcaption {
+    margin-bottom: 1.2em;
+}
+
+/*##################################################
+    DIV QUE CONTIENE EL FORMULARIO DE CONTACTO.HTML
+####################################################*/
+
+#contenedorFormulario {
+    width: 40%;
+    margin: 40px auto;
+    background-color: darkgrey;
+    padding: 0.4em;
+    height: 380px;
+    color: #fff;
+    margin-top: 70px;
+    margin-bottom: 120px;
+}
+
+#contenedorFormulario h2 {
+    text-align: center;
+}
+
+form label {
+    width: 25%;
+    display: block;
+    float: left;
+    margin-top: 4px;
+}
+
+form input {
+    width: 70%;
+    float: right;
+    margin-bottom: 2px;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 70%;
+    float: right;
+    resize: none;
+    min-height: 130px;
+    /*max-height: 150px;*/
+    box-sizing: border-box;
+    margin-bottom: 2.1em;
+}
+
+
+#botonEnviar {
+    width: 100%;
+    height: 30px;
+    border-radius: 8px;
+    background-color: #388ee1;
+    color: #FFFFFF;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#botonEnviar:hover {
+    cursor: pointer;
+}
+
+/*##################################################
+            FOTO DE CADA AUTOR EN EL ASIDE 
+              DE LA PÁGINA DE CADA AUTOR 
+####################################################*/
+
+.redonda {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: #388ee1;
+    padding: 2px;
+}
+
+/*##################################################
+        ACORDEON CON LOS POEMAS DE CADA AUTOR 
+               EN LA PÁGINA DE CADA UNO
+####################################################*/
+
+.acordeon {
+    margin-left: 20px;
+    margin-top: 2em;
+    position: absolute;
+    width: 70%;
+}
+
+.acordeon input {
+    display: none;
+}
+
+.acordeon__titulo {
+    display: block;
+    padding: 15px;
+    background: #1D1D6C;
+    color: #FFF;
+    font-size: 1.4em;
+    cursor: pointer;
+    border-bottom: 1px solid #fff;
+    text-align: center;
+    border-radius: 10px;
+
+}
+
+.acordeon__titulo:hover {
+    background: #3E3EF9;
+}
+
+.acordeon__contenido {
+    height: 0;
+    overflow: scroll;
+    margin: 0;
+    transition: all 0.5s;
+    text-align: center;
+    max-height: 100px;
+}
+
+.acordeon input:checked ~ .acordeon__contenido {
+    height: auto;
+    margin: 15px 0;
+}
+
+/*##################################################
+         ASIDE DE CADA PÁGINA DE AUTOR
+####################################################*/
+
+.lateralAutor {
+    float: right;
+    height: auto;
+    width: 20%;
+}
+
+.lateralAutor p {
+    padding: 0.6em;
+    text-align: justify;
+}
+
+
+
+
+
+/*ESTILOS CUANDO EL TAMAÑO DE PANTALLA DISMINUYE POR DEBAJO DE 768PX*/
+
+@media screen and (max-width:768px) {
+
+/*##################################################
+         ASIDE INDEX.HTML Y AUTORES.HTML
+####################################################*/
+    aside {
+        margin-left: 0.5em;
+        margin-right: 1.2em;
+        margin-top: 6.88em;
+        height: 400px;
+    }
+
+    aside h3 {
+        font-size: 0.5em;
+    }
+
+    aside p {
+        font-size: 0.5em;
+    }
+
+    aside img {
+        width: 55px;
+        height: 80px;
+        padding: 1px;
+    }
+
+/*##################################################
+DIV CONTENEDOR DE LOS SECTION Y ASIDE DE CADA PÁGINA
+####################################################*/
+    #contenedor {
+        min-height: 158%;
+    }
+
+/*##################################################
+         LOS DOS ARTICLES DE INDEX.HTML
+####################################################*/    
+    .articulo > p {
+        font-size: 0.6em;
+        margin-bottom: 1.2em;
+    }
+
+    .articulo:first-child {
+        margin-top: 6.88em;
+    }
+
+    .articulo img {
+        width: 3em;
+        height: 3em;
+        padding: 1px;
+    }
+
+/*##################################################
+                    ENCABEZADO
+####################################################*/
+    header h1 {
+        font-size: 1em;
+        margin-top: 3.4em;
+        margin-right: 1em;
+    }
+
+    header img {
+        width: 80px;
+        height: auto;
+        margin-top: 2.1em;
+        margin-left: 1.2em;
+    }
+
+/*##################################################
+         ASIDE DE CADA PÁGINA DE AUTOR
+####################################################*/
+    .lateralAutor {
+        margin-top: 110px;
+        padding: 0.1em;
+        width: inherit;
+        height: auto;
+    }
+
+    .lateralAutor img {
+        width: 30px;
+        height: 30px;
+        margin-top: 0.2em;
+    }
+
+    .lateralAutor h2 {
+        font-size: 0.7em;
+    }
+
+    
+/*##################################################
+        ACORDEON CON LOS POEMAS DE CADA AUTOR 
+                EN LA PÁGINA DE CADA UNO
+####################################################*/
+    .acordeon {
+        margin-left: -0.5em;
+        margin-top: 6.88em;
+        width: 60%;
+    }
+
+    .acordeon__titulo {
+        font-size: 0.8em;
+    }
+
+    .acordeon__contenido {
+        font-size: 0.7em;
+    }
+
+/*##################################################
+    DIV QUE CONTIENE EL FORMULARIO DE CONTACTO.HTML
+####################################################*/
+    #contenedorFormulario {
+        width: 65%;
+        margin-top: 9.4em;
+        font-size: 0.8em;
+        height: 280px;
+    }
+
+    form input {
+        height: 1.5em;
+    }
+    #botonEnviar {
+        font-size: 1.2em;
+    }
+   
+/*##################################################
+    DIV QUE CONTIENE LAS FOTOS DE LOS 4 AUTORES 
+            DE LA PÁGINA AUTORES.HTML
+####################################################*/ 
+    #fotoautores {
+        margin-top: 6.88em;
+        margin-left: -0.6em;
+    }
+    
+    figure img {
+        width: 140px;
+        height: 140px;
+    }
+
+    
+/*##################################################
+            ASIDE DE LA PÁGINA AUTORES.HTML
+####################################################*/
+    #lateralPagAutores {
+        margin-left: -3.2em;
+    }
+
+    figcaption,
+    nav ul,
+    footer p a {
+        font-size: 0.7em;
+    }
+
+}
